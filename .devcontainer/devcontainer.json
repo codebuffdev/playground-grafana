@@ -1,14 +1,5 @@
 {
 	"name": "Grafana Development",
-	"image": "grafana/grafana-dev:latest",
-	"extensions": [],
-	"postCreateCommand": "yarn install",
-	"forwardPorts": [3000],
-	"remoteUser": "codespace",
-	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash",
-		"terminal.integrated.shellArgs.linux": ["--login"]
-	},
-	"runArgs": ["--privileged"],
-	"workspaceFolder": "/workspace"
+	"postCreateCommand": "/bin/bash -i -c .devcontainer/startup_script.sh",
+	"forwardPorts": [3000]
 }
